@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class GusseNo extends javax.swing.JFrame {
 
-    	 String s;  int g = 0; int i = 0;
+    	 String s;  int g = 0; int i = 0,j=0,k=0;
 	
 		int n = (int)(Math.random()*100);
 
@@ -98,7 +98,7 @@ public class GusseNo extends javax.swing.JFrame {
 				g= Integer.parseInt(s);
 		
 			if (g==n)
-			{
+			{      // j=j+1;
 				JOptionPane.showMessageDialog(null, "Congratulation You Guess Right Number");
                                 i=i+1;
 		
@@ -107,7 +107,7 @@ public class GusseNo extends javax.swing.JFrame {
 			else
 			{
 				if (g>n)
-				{
+				{        k=k+1;
 					JOptionPane.showMessageDialog(null, "Number is Greater\n Try Another But Smaller");
 				}
 				else
@@ -118,7 +118,9 @@ public class GusseNo extends javax.swing.JFrame {
 							JOptionPane.showMessageDialog(null, "ThankYou ");
 								break;
 						}
-					JOptionPane.showMessageDialog(null, "Number isSmaller\n Try Another But Greater");
+                                        
+                                                    j=j+1;
+					JOptionPane.showMessageDialog(null, "Number is Smaller\n Try Another But Greater");
 				   }
 				
 			}
@@ -129,7 +131,8 @@ public class GusseNo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(null, "Your Score is:"+i);
+        
+        JOptionPane.showMessageDialog(null, "You took "+j+" Attempts to gusse right \n Your Score is: "+i);
 				  
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
